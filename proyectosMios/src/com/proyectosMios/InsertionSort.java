@@ -31,7 +31,7 @@ public class InsertionSort {
 				lista[j+1]=temp;
 				j--;
 			}
-			//lista[j]=v;
+			
 		}
 		System.out.println(" ");
 		System.out.println("la lista ordenada es: ");
