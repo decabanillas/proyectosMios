@@ -1,5 +1,6 @@
 package com.ejemploImplement;
 
+//el implement es como una multiple herencia
 public class suma implements sumarCodigo{
 	int a,b;
 	public suma(){

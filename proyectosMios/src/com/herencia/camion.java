@@ -1,5 +1,5 @@
 package com.herencia;
-
+//la herencia permite solo se permite heredar de uno sola clase, la implementacion de varias(multi herencia)
 public class camion extends auto{
 	
 	int peso;
