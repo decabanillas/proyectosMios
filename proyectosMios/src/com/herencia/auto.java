@@ -1,11 +1,11 @@
 package com.herencia;
 
-public class auto {
+public abstract class auto {
 
 	String marca;
 	
 	int ruedas;
-	public auto(String marca,int ruedas ){
+	public  auto(String marca,int ruedas ){
 		this.marca=marca;
 		this.ruedas=ruedas;
 		
