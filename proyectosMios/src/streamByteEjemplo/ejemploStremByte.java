@@ -7,17 +7,23 @@ import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.awt.image.ColorModel;
+import java.awt.image.IndexColorModel;
 
 public class ejemploStremByte {
 	public FileInputStream miarchivo;
 	public int contador=0;
-	public Color color;
+	public static Color colorAux;
 	static BufferedImage imagen,bmp=null;
 	ArrayList<Integer> almacen=new ArrayList<Integer>();
+	private static BufferedImage imageActual;
+	
+	
 	//constructor
 	public ejemploStremByte(){
 		
 	}
+	
 	public void lee() {//lee la imagen
 		try {
 			miarchivo =new FileInputStream("C:/Users/Public/Pictures/Sample Pictures/Penguins.jpg");
@@ -42,6 +48,7 @@ public class ejemploStremByte {
 			miarchivo.close();
 			
 			escribe(almacen); //llama al metodo para crear la copia de la imagen
+			gris(almacen);
 		
 		}catch(IOException e) {
 			
@@ -67,10 +74,17 @@ public class ejemploStremByte {
 	
 	static void gris(ArrayList<Integer> datos_gris) {
 		try {
-			FileOutputStream salida =new FileOutputStream("C:/Users/Public/Pictures/Sample Pictures/Pen2.jpg");
+			FileOutputStream salida =new FileOutputStream("C:/Users/Public/Pictures/Sample Pictures/Pen3.jpg");
 			for(int i=0;i<datos_gris.size();i++) {
-				//salida.write(datos_gris.get(i));
-				//bmp=datos_gris.get(i);
+				/*int mediaPixel, colorSRGB;
+				int rgb =datos_gris.get(i);
+				colorAux=new Color(imageActual.getRaster().getPixel(250,100, 0));
+				mediaPixel=(int)((colorAux.getRed()+colorAux.getGreen()+colorAux.getBlue())/3);
+				colorSRGB=(mediaPixel << 16) | (mediaPixel << 8) | mediaPixel;
+				
+				salida.write(colorSRGB);
+				*/
+				
 			}
 			salida.close();
 		}catch(IOException e) {
