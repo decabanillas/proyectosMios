@@ -5,7 +5,7 @@ public class pruebaconIndex {
 	public pruebaconIndex() {
 		
 	}
-	
+	//esta es una prueba
 	public void sacarIndex(String palabras) {
 		int posicion=palabras.indexOf("Hola");
 		System.out.println(posicion);
