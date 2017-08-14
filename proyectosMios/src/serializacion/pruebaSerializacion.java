@@ -8,7 +8,15 @@ import java.io.Serializable;
 /*al implementar de serializable le decimos a nuestro programa
 que se puede convertir a bytes nuestro objeto*/
 
+
 public class pruebaSerializacion implements Serializable {
+	
+   
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L; //para q reconozca los cambios en la misma version, generalmete te pide si usas 
+	//implements de alguna clase
 	int sueldo;
 	public pruebaSerializacion(int sueldo) {
 		this.sueldo=sueldo*10;
