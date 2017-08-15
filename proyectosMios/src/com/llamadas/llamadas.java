@@ -32,7 +32,7 @@ public class llamadas {
 	public static void main (String[]args) {
 		llamadas a1=new llamadas(15,"Deiby","Cabanillas");
 		System.out.println(a1.getNombre());
-		a1.setNombre(a1.getApellido());
+		a1.setNombre(a1.getApellido());//pasando el apellido como nombre
 		System.out.println(a1.getNombre());
 	}
 }
